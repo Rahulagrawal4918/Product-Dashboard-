@@ -1,4 +1,4 @@
-﻿# Product Dashboard
+# Product Dashboard
 
 A polished React + Vite product dashboard built for fast editing, clean presentation, and robust state handling.
 
