@@ -484,55 +484,6 @@ select:focus {
   background: rgba(248, 250, 252, 0.9);
 }
 
-@media (max-width: 960px) {
-  .layout {
-    grid-template-columns: 1fr;
-    padding: 18px;
-  }
-
-  .sidebar {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-  }
-
-  .sidebar-nav {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .main {
-    gap: 18px;
-  }
-
-  .dashboard-hero {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .table-toolbar,
-  .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .search-panel,
-  .sort-panel {
-    width: 100%;
-  }
-
-  .search-panel input,
-  .search-panel select {
-    width: 100%;
-  }
-
-  .product-table {
-    min-width: 100%;
-  }
-}
 .search-panel {
   display: flex;
   flex-wrap: wrap;
@@ -828,22 +779,123 @@ select:focus {
     grid-template-columns: 1fr;
   }
 
+  .sidebar {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 22px 18px;
+  }
+
+  .sidebar-nav {
+    flex: 1 1 100%;
+    margin-top: 12px;
+    min-width: 0;
+  }
+
+  .hero-panel,
   .stats-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 960px) {
+  .header,
+  .table-card,
+  .dashboard-intro,
+  .history-panel,
+  .status-panel {
+    padding: 20px;
+  }
+
+  .table-toolbar,
   .hero-actions,
-  .sort-panel,
   .control-row,
   .status-panel,
-  .search-panel {
+  .search-panel,
+  .sort-panel,
+  .view-toggle {
     flex-direction: column;
     align-items: stretch;
   }
 
-  .stats-grid {
+  .table-toolbar {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .search-panel,
+  .sort-panel,
+  .view-toggle {
+    width: 100%;
+  }
+
+  .view-toggle {
+    justify-content: space-between;
+  }
+
+  .sort-panel button,
+  .view-toggle button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  .layout {
+    padding: 16px;
+  }
+
+  .sidebar {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .sidebar-nav {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .header {
+    padding: 18px;
+  }
+
+  .dashboard-intro,
+  .table-card,
+  .history-panel,
+  .status-panel {
+    padding: 18px;
+  }
+
+  .table-card {
+    padding: 24px;
+  }
+
+  .table-header {
+    gap: 14px;
+  }
+
+  .table-toolbar {
+    gap: 14px;
+  }
+
+  .product-table th,
+  .product-table td {
+    padding: 14px 12px;
+  }
+
+  .product-table {
+    min-width: 100%;
+  }
+
+  .view-toggle {
+    padding: 10px 12px;
+  }
+
+  .view-toggle button,
+  .sort-panel button {
+    width: 100%;
   }
 }
